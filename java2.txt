@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class BodaFareCalculator {
+    
+    private static final int BASE_FARE = 2000; // Base fare in UGX
+    private static final int RATE_PER_KM = 500; // Rate per km in UGX
+
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.print("Enter the distance traveled (in km): ");
+        double distance = scanner.nextDouble();
+
+
+        double totalFare = BASE_FARE + (RATE_PER_KM * distance);
+
+    
+        System.out.println("Your fare for " + distance + " km is UGX " + totalFare + ".");
+
+  
+        scanner.close();
+    }
+}
